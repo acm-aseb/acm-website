@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About ACM | ACM Student Chapter Amrita</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0b0f2f;color:#fff;overflow-x:hidden}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;top:0;width:100%;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 8%;
+  background:rgba(11,15,47,.7);
+  backdrop-filter:blur(14px);
+  z-index:1000;
+}
+nav a{
+  margin:0 1rem;color:#fff;text-decoration:none;position:relative;
+}
+nav a::after{
+  content:'';position:absolute;width:0;height:2px;
+  background:#5efce8;bottom:-6px;left:0;transition:.3s;
+}
+nav a:hover::after{width:100%}
+.logo{height:42px}
+
+/* HERO */
+.hero{
+  min-height:90vh;
+  padding:8rem 8% 4rem;
+  background:radial-gradient(circle at top,#5efce8,#736efe,#0b0f2f 65%);
+  display:flex;
+  align-items:center;
+}
+.hero-content{
+  max-width:750px;
+  animation:fadeUp 1.2s ease;
+}
+.hero h1{
+  font-size:3.6rem;
+  background:linear-gradient(90deg,#ffe259,#ffa751,#5efce8);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.hero p{
+  margin-top:1.5rem;
+  color:#e6e6ff;
+  font-size:1.05rem;
+  line-height:1.7;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(40px)}
+  to{opacity:1;transform:none}
+}
+
+/* SECTIONS */
+section{
+  padding:5rem 8%;
+}
+.section-box{
+  background:linear-gradient(180deg,#0b0f2f,#13186b);
+  padding:4rem;
+  border-radius:40px;
+  box-shadow:0 30px 80px rgba(0,0,0,.4);
+  animation:fadeUp 1s ease;
+}
+.section-box h2{
+  font-size:2.3rem;
+  margin-bottom:1.5rem;
+  background:linear-gradient(90deg,#5efce8,#ff4ecd);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.section-box p{
+  line-height:1.8;
+  color:#e0e0ff;
+  font-size:1rem;
+}
+
+/* TIMELINE */
+.timeline{
+  margin-top:3rem;
+  display:grid;
+  gap:2rem;
+}
+.timeline-item{
+  background:#12165a;
+  padding:2rem;
+  border-radius:25px;
+  border-left:4px solid #5efce8;
+  transition:.4s;
+}
+.timeline-item:hover{
+  transform:translateX(8px);
+  box-shadow:0 15px 40px rgba(94,252,232,.25);
+}
+.timeline-item h3{
+  color:#ffe259;
+  margin-bottom:.6rem;
+}
+
+/* STATUS BOX */
+.status{
+  margin-top:3rem;
+  background:linear-gradient(135deg,#ff4ecd,#6a5cff);
+  padding:2.5rem;
+  border-radius:30px;
+  text-align:center;
+  box-shadow:0 20px 50px rgba(255,78,205,.4);
+}
+.status h3{
+  font-size:1.6rem;
+  margin-bottom:1rem;
+}
+.status p{
+  opacity:.95;
+}
+
+/* FOOTER */
+footer{
+  background:#050824;
+  padding:2rem;
+  text-align:center;
+  color:#bdbdff;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero h1{font-size:2.6rem}
+  .section-box{padding:2.5rem}
+  nav{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div>
+    <img src="ACM_logo.jpeg" class="logo">
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="teams.html">Teams</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>About ACM</h1>
+    <p>
+      Discover the global computing community behind the world’s most influential
+      innovations — and how ACM at Amrita brings this vision to life.
+    </p>
+  </div>
+</section>
+
+<!-- WHAT IS ACM -->
+<section>
+  <div class="section-box">
+    <h2>What is ACM?</h2>
+    <p>
+      The <strong>Association for Computing Machinery (ACM)</strong> is the world’s
+      largest and most influential professional organization for computing.
+      With a global network of researchers, educators, and practitioners,
+      ACM advances computing as a science and a profession.
+      <br><br>
+      ACM plays a vital role in shaping the future of technology by promoting
+      innovation, research, ethical computing, and professional excellence
+      across disciplines such as artificial intelligence, cybersecurity,
+      data science, software engineering, and human–computer interaction.
+    </p>
+  </div>
+</section>
+
+<!-- ACM STUDENT CHAPTERS -->
+<section>
+  <div class="section-box">
+    <h2>ACM Student Chapters</h2>
+    <p>
+      ACM Student Chapters act as a bridge between academic learning and the
+      professional computing world. These chapters empower students by providing
+      opportunities to collaborate, lead, innovate, and grow beyond classrooms.
+      <br><br>
+      Through student chapters, members gain exposure to real-world challenges,
+      cutting-edge technologies, peer learning, and industry-aligned activities.
+    </p>
+  </div>
+</section>
+
+<!-- ACM AT AMRITA -->
+<section>
+  <div class="section-box">
+    <h2>ACM at Amrita Vishwa Vidyapeetham</h2>
+
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>Our Mission</h3>
+        <p>
+          To cultivate a strong technical culture that inspires innovation,
+          problem-solving, leadership, and collaborative learning.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>What We Do</h3>
+        <p>
+          We organize hackathons, technical workshops, coding contests,
+          expert talks, outreach programs, and hands-on projects that
+          prepare students for real-world challenges.
+        </p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Flagship Initiatives</h3>
+        <p>
+          Our flagship event <strong>Algomania</strong> is an overnight hackathon
+          that brings together creative minds to solve impactful problems
+          through technology, teamwork, and innovation.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATUS -->
+<section>
+  <div class="status">
+    <h3>Current Status</h3>
+    <p>
+      Executive recruitment for the current academic year is closed.
+      <br>
+      Follow us on Instagram to stay updated about events, hackathons,
+      workshops, and future opportunities.
+    </p>
+  </div>
+</section>
+
+<footer>
+  © ACM Student Chapter | Amrita Vishwa Vidyapeetham, Bengaluru
+</footer>
+
+</body>
+</html>

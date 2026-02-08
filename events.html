@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACM Events | Amrita Vishwa Vidyapeetham</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0b0f2f;color:#fff;overflow-x:hidden}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;top:0;width:100%;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 8%;
+  background:rgba(11,15,47,.65);
+  backdrop-filter:blur(14px);
+  z-index:1000;
+}
+.nav-left,.nav-right{display:flex;align-items:center;gap:12px}
+.logo{height:42px}
+nav a{margin:0 1rem;color:#fff;text-decoration:none}
+
+/* HEADER */
+.header{
+  padding:8rem 8% 4rem;
+  text-align:center;
+}
+.header h1{
+  font-size:3rem;
+  background:linear-gradient(90deg,#5efce8,#ff4ecd);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.header p{color:#e6e6ff;margin-top:1rem}
+
+/* SECTION */
+section{padding:3rem 8%}
+
+/* EVENT WRAPPER */
+.event-row{
+  display:flex;
+  gap:3rem;
+  margin-bottom:4rem;
+  background:linear-gradient(145deg,#1a1f6b,#2a2fb5);
+  border-radius:30px;
+  padding:2rem;
+  align-items:center;
+  box-shadow:0 25px 70px rgba(0,0,0,.45);
+}
+
+/* IMAGE STRIP */
+.event-images{
+  display:flex;
+  gap:1rem;
+  flex-wrap:wrap;
+}
+.event-images img{
+  width:180px;
+  height:130px;
+  object-fit:cover;
+  border-radius:16px;
+  border:3px solid #5efce8;
+}
+/* ALGOMANIA POSTER ONLY */
+.algomania-poster{
+  height:380px !important;   /* increase height */
+  width:260px !important;    /* slightly wider */
+  object-fit:contain !important; /* show full poster */
+  background:#0b0f2f;
+  padding:12px;
+  border-radius:22px;
+}
+
+
+/* EVENT CONTENT */
+.event-content{
+  flex:1;
+}
+.event-tag{
+  display:inline-block;
+  padding:6px 14px;
+  border-radius:20px;
+  font-size:.75rem;
+  background:#5efce8;
+  color:#000;
+  margin-bottom:1rem;
+}
+.event-content h3{
+  color:#ffe259;
+  margin-bottom:1rem;
+}
+.event-content p{
+  color:#e0e0ff;
+  line-height:1.7;
+}
+
+/* REGISTER BUTTON */
+.register-btn{
+  margin-top:1.5rem;
+  padding:12px 28px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(135deg,#ff4ecd,#6a5cff);
+  color:#fff;
+  font-size:.95rem;
+  cursor:pointer;
+  box-shadow:0 15px 40px rgba(255,78,205,.4);
+}
+
+/* SECTION TITLE */
+.section-title{
+  font-size:2rem;
+  color:#5efce8;
+  margin-bottom:2.5rem;
+}
+
+/* FOOTER */
+footer{
+  background:#050824;
+  padding:2rem;
+  text-align:center;
+  color:#bdbdff;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .event-row{
+    flex-direction:column;
+    text-align:center;
+  }
+  .event-images{
+    justify-content:center;
+  }
+  nav{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-left">
+    <img src="ACM_logo.jpeg" class="logo">
+    <strong>ACM Amrita</strong>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="teams.html">Teams</a>
+    <a href="contact.html">Contact Us </a>
+
+  </nav>
+  <div class="nav-right">
+    <img src="amrita-logo-new.svg" class="logo">
+  </div>
+</header>
+
+<div class="header">
+  <h1>Our Events</h1>
+  <p>Flagship, outreach, and technical events by ACM Amrita</p>
+</div>
+
+<!-- UPCOMING EVENTS -->
+<section>
+  <h2 class="section-title">Upcoming Events</h2>
+
+  <div class="event-row">
+    <div class="event-images">
+        <img src="algomania.png" class="algomania-poster">
+
+    </div>
+
+    <div class="event-content">
+      <span class="event-tag">Flagship Event</span>
+      <h3>Algomania 3.0 — Overnight Hackathon</h3>
+      <p>
+        <strong>Algomania 3.0</strong> is the flagship event of the ACM Student Chapter,
+        Amrita Vishwa Vidyapeetham. Scheduled on <strong>13th February</strong>, this
+        overnight hackathon brings together passionate developers and problem-solvers
+        to build innovative solutions through collaboration, creativity, and technology.
+      </p>
+      <button class="register-btn">Register Now</button>
+    </div>
+  </div>
+</section>
+
+<!-- PAST EVENTS -->
+<section>
+  <h2 class="section-title">Past Events</h2>
+
+  <!-- BYTEROOTS -->
+  <div class="event-row">
+    <div class="event-images">
+      <img src="byteroots1.jpeg">
+      <img src="byteroots2.jpeg">
+      <img src="byteroots3.jpeg">
+    </div>
+
+    <div class="event-content">
+      <span class="event-tag">Collaboration Event</span>
+      <h3>ByteRoots</h3>
+      <p>
+        <strong>ByteRoots</strong> was a collaborative event conducted in association
+        with the <strong>Prakriti Club</strong>. It was a unique
+        <strong>Tech × Treasure Hunt</strong> experience where participants solved
+        technical clues and challenges to progress through different stages,
+        combining logical thinking, teamwork, and problem-solving skills.
+      </p>
+    </div>
+  </div>
+
+  <!-- AAROHAN -->
+  <div class="event-row">
+    <div class="event-images">
+      <img src="aarohan1.jpeg">
+      <img src="aarohan2.jpeg">
+      <img src="aarohan3.jpeg">
+    </div>
+
+    <div class="event-content">
+      <span class="event-tag">Outreach Event</span>
+      <h3>Aarohan</h3>
+      <p>
+        <strong>Aarohan</strong> was an outreach initiative where school students
+        were invited to visit our campus and experience college life. The event
+        featured <strong>four interactive technical stalls</strong> involving
+        games, puzzles, and logical challenges designed to introduce young minds
+        to technology in an engaging and enjoyable manner.
+      </p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © ACM Student Chapter | Amrita Vishwa Vidyapeetham, Bengaluru
+</footer>
+
+</body>
+</html>

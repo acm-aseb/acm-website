@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | ACM Student Chapter – Amrita</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0b0f2f;color:#fff;overflow-x:hidden}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;top:0;width:100%;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 8%;
+  background:rgba(11,15,47,.65);
+  backdrop-filter:blur(14px);
+  z-index:1000;
+}
+.nav-left,.nav-right{display:flex;align-items:center;gap:12px}
+.logo{height:42px}
+nav a{
+  margin:0 1rem;color:#fff;text-decoration:none;position:relative;
+}
+nav a::after{
+  content:'';position:absolute;width:0;height:2px;
+  background:#5efce8;bottom:-6px;left:0;transition:.3s;
+}
+nav a:hover::after{width:100%}
+
+/* HEADER */
+.header{
+  padding:8rem 8% 4rem;
+  text-align:center;
+}
+.header h1{
+  font-size:3rem;
+  background:linear-gradient(90deg,#5efce8,#ff4ecd);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.header p{color:#e6e6ff;margin-top:1rem}
+
+/* CONTACT BOX */
+.contact-box{
+  max-width:750px;
+  margin:0 auto 4rem;
+  background:linear-gradient(180deg,#13186b,#0b0f2f);
+  padding:3.5rem;
+  border-radius:40px;
+  text-align:center;
+  box-shadow:0 30px 80px rgba(0,0,0,.45);
+}
+
+.contact-box h2{
+  font-size:1.6rem;
+  letter-spacing:2px;
+  margin-bottom:2.5rem;
+}
+
+.contact-item{
+  margin-bottom:2rem;
+}
+.contact-item h3{
+  color:#5efce8;
+  margin-bottom:.4rem;
+}
+.contact-item p{
+  color:#e6e6ff;
+  font-size:1.05rem;
+}
+
+/* LINKS */
+.contact-link{
+  color:#5efce8;
+  text-decoration:none;
+}
+.contact-link:hover{text-decoration:underline}
+
+/* DIVIDER */
+.divider{
+  width:80%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,#5efce8,transparent);
+  margin:2.5rem auto;
+}
+
+/* MAP */
+.map-box{
+  margin-top:3rem;
+  border-radius:30px;
+  overflow:hidden;
+  border:3px solid rgba(94,252,232,.4);
+}
+.map-box iframe{
+  width:100%;
+  height:350px;
+  border:none;
+}
+
+/* FOOTER */
+footer{
+  background:#050824;
+  padding:2rem;
+  text-align:center;
+  color:#bdbdff;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .header h1{font-size:2.2rem}
+  nav{display:none}
+  .contact-box{padding:2.5rem}
+  .map-box iframe{height:260px}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-left">
+    <img src="ACM_logo.jpeg" class="logo">
+    <strong>ACM Amrita</strong>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="teams.html">Teams</a>
+    <a href="contact.html">Contact Us
+        
+    </a>
+  </nav>
+  <div class="nav-right">
+    <img src="amrita-logo-new.svg" class="logo">
+  </div>
+</header>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Contact Us</h1>
+  <p>Reach out to the ACM Student Chapter – Amrita</p>
+</div>
+
+<!-- CONTACT DETAILS -->
+<div class="contact-box">
+
+  <h2>CONTACT DETAILS</h2>
+
+  <div class="contact-item">
+    <h3>President</h3>
+    <p>📞 Keerthana | +971 54 544 6720</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="contact-item">
+    <h3>Vice President</h3>
+    <p>📞 Lasya | +91 63640 83940</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="contact-item">
+    <h3>Treasurer</h3>
+    <p>📞 Manvith | +91 90307 95630</p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="contact-item">
+    <h3>Email</h3>
+    <p>
+      📧 
+      <a href="mailto:acm.amrita.blr@gmail.com" class="contact-link">
+        acm.amrita.blr@gmail.com
+      </a>
+    </p>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="contact-item">
+    <h3>Instagram</h3>
+    <p>
+      📸 
+      <a href="https://instagram.com/acm_amrita" target="_blank" class="contact-link">
+        @acm_amrita
+      </a>
+    </p>
+  </div>
+
+  <!-- MAP -->
+  <div class="divider"></div>
+
+  <div class="contact-item">
+    <h3>College Location</h3>
+    <p>📍 Amrita Vishwa Vidyapeetham, Bengaluru Campus</p>
+  </div>
+
+  <div class="map-box">
+    <iframe 
+      src="https://www.google.com/maps?q=Amrita%20Vishwa%20Vidyapeetham%20Bengaluru&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+
+</div>
+
+<footer>
+  © ACM Student Chapter | Amrita Vishwa Vidyapeetham, Bengaluru
+</footer>
+
+</body>
+</html>

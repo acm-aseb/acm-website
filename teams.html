@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACM Teams | Amrita Vishwa Vidyapeetham</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0b0f2f;color:#fff;overflow-x:hidden}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;
+  top:0;width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 8%;
+  background:rgba(11,15,47,.65);
+  backdrop-filter:blur(14px);
+  z-index:1000;
+}
+.nav-left,.nav-right{display:flex;align-items:center;gap:12px}
+.logo{height:42px}
+nav a{
+  margin:0 1rem;
+  color:#fff;
+  text-decoration:none;
+  position:relative;
+}
+nav a::after{
+  content:'';
+  position:absolute;
+  width:0;height:2px;
+  background:#5efce8;
+  bottom:-6px;left:0;
+  transition:.3s;
+}
+nav a:hover::after{width:100%}
+
+/* HEADER */
+.header{
+  padding:8rem 8% 4rem;
+  text-align:center;
+}
+.header h1{
+  font-size:3rem;
+  background:linear-gradient(90deg,#5efce8,#ff4ecd);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+.header p{color:#e6e6ff;margin-top:1rem}
+
+/* SECTIONS */
+section{padding:4rem 8%}
+
+/* TEAM SECTION */
+.team-section{
+  background:linear-gradient(180deg,#0b0f2f,#13186b);
+  border-radius:40px;
+  padding:3rem;
+  margin-bottom:3rem;
+  box-shadow:0 30px 80px rgba(0,0,0,.4);
+}
+.team-section h2{
+  color:#5efce8;
+  margin-bottom:.8rem;
+}
+.team-section .desc{
+  color:#e0e0ff;
+  margin-bottom:2rem;
+  line-height:1.7;
+  font-size:.95rem;
+}
+
+/* MEMBER GRID */
+.member-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:2rem;
+}
+.member{
+  background:#12165a;
+  padding:1.5rem;
+  border-radius:25px;
+  text-align:center;
+  transition:.4s;
+}
+.member img{
+  width:110px;
+  height:110px;
+  border-radius:50%;
+  object-fit:cover;
+  border:4px solid #5efce8;
+}
+.member h4{margin-top:1rem}
+.member p{color:#bdbdff;font-size:.9rem}
+.member:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 60px rgba(94,252,232,.35);
+}
+
+/* FOOTER */
+footer{
+  background:#050824;
+  padding:2rem;
+  text-align:center;
+  color:#bdbdff;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .header h1{font-size:2.2rem}
+  nav{display:none}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="nav-left">
+    <img src="ACM_logo.jpeg" class="logo">
+    <strong>ACM Amrita</strong>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="teams.html">Teams</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact Us </a>
+  </nav>
+  <div class="nav-right">
+    <img src="amrita-logo-new.svg" class="logo">
+  </div>
+</header>
+
+<!-- HEADER -->
+<div class="header">
+  <h1>Executive Committees</h1>
+  <p>Meet the teams powering ACM Amrita</p>
+</div>
+
+<!-- TECH & DEVELOPMENT -->
+<section class="team-section">
+  <h2>🔧 Tech & Development</h2>
+  <p class="desc">
+    The Tech & Development team is responsible for building and maintaining technical solutions for
+    ACM initiatives. This team works on web development, problem-solving platforms, coding challenges,
+    and supports the technical execution of events, hackathons, and workshops.
+  </p>
+  <div class="member-grid">
+    <div class="member"><img src="yasasri.jpeg"><h4>S Yasassri</h4><p>Team Lead</p></div>
+    <div class="member"><img src="karthikeya.jpeg"><h4>K Karthikeya</h4></div>
+    <div class="member"><img src="aanand.jpeg"><h4>Anand Patil</h4></div>
+    <div class="member"><img src="aneesh.jpeg"><h4>Aneesh Sagar Reddy</h4></div>
+    <div class="member"><img src="suryapramod.jpeg"><h4>Surya Pramod</h4></div>
+  </div>
+</section>
+
+<!-- DESIGN & MEDIA -->
+<section class="team-section">
+  <h2>🎨 Design & Media</h2>
+  <p class="desc">
+    The Design & Media team handles all visual and creative aspects of ACM activities.
+    From posters, banners, and social media creatives to UI design and branding,
+    this team ensures that ACM maintains a strong and engaging visual identity.
+  </p>
+  <div class="member-grid">
+    <div class="member"><img src="shivani.jpeg"><h4>Shivani Pattnayak</h4><p>Team Lead</p></div>
+    <div class="member"><img src="dishi.jpeg"><h4>Dishi Sharma</h4></div>
+    <div class="member"><img src="saipreethi.jpeg"><h4>Sai Preethi Balaji</h4></div>
+    <div class="member"><img src="suryatejesh.jpeg"><h4> Surya Tejesh</h4></div>
+  </div>
+</section>
+
+<!-- PR & SOCIAL MEDIA -->
+<section class="team-section">
+  <h2>📢 PR & Social Media</h2>
+  <p class="desc">
+    The PR & Social Media team manages outreach, promotions, and communication.
+    They handle announcements, event publicity, collaborations, and ensure consistent
+    engagement across all social media platforms to expand ACM’s reach.
+  </p>
+  <div class="member-grid">
+    <div class="member"><img src="avinash.jpeg"><h4>Avinash</h4><p>Team Lead</p></div>
+    <div class="member"><img src="praneeth.jpeg"><h4>P.Raja Praneeth</h4></div>
+    <div class="member"><img src="pavithra.jpeg"><h4>Pavithra</h4></div>
+  </div>
+</section>
+
+<!-- EVENT MANAGEMENT -->
+<section class="team-section">
+  <h2>📑 Event Management & Documentation</h2>
+  <p class="desc">
+    The Event Management & Documentation team coordinates planning, execution,
+    and documentation of all ACM events. They manage logistics, schedules,
+    reports, and ensure smooth coordination across teams during events.
+  </p>
+  <div class="member-grid">
+    <div class="member"><img src="tanay.jpeg"><h4>Tanay</h4><p>Team Lead</p></div>
+    <div class="member"><img src="navneetha.jpeg"><h4>Navnita Krishnan</h4></div>
+    <div class="member"><img src="navaneeth.jpeg"><h4>Navaneeth Uppalapati</h4></div>
+  </div>
+</section>
+
+<footer>
+  © ACM Student Chapter | Amrita Vishwa Vidyapeetham, Bengaluru
+</footer>
+
+</body>
+</html>
