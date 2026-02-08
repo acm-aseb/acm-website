@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ACM Student Chapter | Amrita Vishwa Vidyapeetham</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+body{background:#0b0f2f;color:#fff;overflow-x:hidden}
+
+/* NAVBAR */
+.navbar{
+  position:fixed;top:0;width:100%;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:1rem 8%;
+  background:rgba(11,15,47,.65);
+  backdrop-filter:blur(14px);
+  z-index:1000;
+}
+.nav-left,.nav-right{display:flex;align-items:center;gap:12px}
+.logo{height:42px}
+nav a{
+  margin:0 1rem;color:#fff;text-decoration:none;position:relative;
+}
+nav a::after{
+  content:'';position:absolute;width:0;height:2px;
+  background:#5efce8;bottom:-6px;left:0;transition:.3s;
+}
+nav a:hover::after{width:100%}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  background:radial-gradient(circle at top,#5efce8,#736efe,#0b0f2f 60%);
+  display:flex;align-items:center;
+  padding:7rem 8% 4rem;
+  position:relative;overflow:hidden;
+}
+.tech-grid,.binary,.floating-icons,.circuit,#constellation{pointer-events:none}
+
+/* TECH GRID */
+.tech-grid{
+  position:absolute;inset:0;
+  background:
+    linear-gradient(rgba(94,252,232,.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(94,252,232,.15) 1px, transparent 1px);
+  background-size:40px 40px;
+  animation:gridMove 25s linear infinite;
+}
+@keyframes gridMove{to{background-position:400px 400px}}
+
+/* BINARY */
+.binary{
+  position:absolute;inset:0;color:#5efce8;
+  font-size:14px;opacity:.22;line-height:1.4;
+  animation:binaryMove 18s linear infinite;
+}
+@keyframes binaryMove{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
+
+/* FLOATING ICONS */
+.floating-icons span{
+  position:absolute;font-size:2rem;color:#5efce8;
+  opacity:.3;animation:floatIcon 10s infinite ease-in-out;
+}
+.floating-icons span:nth-child(1){top:20%;left:10%}
+.floating-icons span:nth-child(2){top:45%;left:60%;animation-delay:2s}
+.floating-icons span:nth-child(3){top:70%;left:30%;animation-delay:4s}
+.floating-icons span:nth-child(4){top:30%;left:80%;animation-delay:6s}
+.floating-icons span:nth-child(5){top:60%;left:50%;animation-delay:8s}
+@keyframes floatIcon{50%{transform:translateY(-20px)}}
+
+/* CIRCUIT */
+.circuit{position:absolute;inset:0;stroke:#5efce8;stroke-width:2;fill:none;opacity:.22}
+.circuit path{
+  stroke-dasharray:200;stroke-dashoffset:200;
+  animation:draw 6s linear infinite;
+}
+@keyframes draw{to{stroke-dashoffset:-200}}
+
+/* HERO TEXT */
+.hero-text{
+  position:relative;z-index:2;
+  max-width:520px;text-align:left;
+}
+.hero-text h1{
+  font-size:3.5rem;line-height:1.15;
+  background:linear-gradient(90deg,#ffe259,#ffa751,#5efce8);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero-text p{margin:1.5rem 0;color:#e6e6ff}
+.hero-text button{
+  padding:14px 36px;border:none;border-radius:40px;
+  background:linear-gradient(135deg,#ff4ecd,#6a5cff);
+  color:#fff;cursor:pointer;
+}
+
+/* CONSTELLATION */
+#constellation{
+  position:absolute;right:5%;top:50%;
+  transform:translateY(-50%);
+  width:420px;height:420px;
+}
+
+/* SECTIONS */
+section{padding:5rem 8%}
+.title{
+  text-align:center;font-size:2.5rem;margin-bottom:3rem;
+  background:linear-gradient(90deg,#5efce8,#ff4ecd);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+}
+
+/* ABOUT */
+.about{
+  background:linear-gradient(180deg,#0b0f2f,#13186b);
+  padding:4rem;border-radius:40px;
+  text-align:center;line-height:1.7;
+}
+
+/* EVENTS */
+.events-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:2rem;
+}
+.event{
+  background:linear-gradient(145deg,#1a1f6b,#2a2fb5);
+  border-radius:30px;
+  padding:2.5rem;
+}
+.event span{
+  background:#5efce8;color:#000;
+  padding:6px 14px;border-radius:20px;font-size:.8rem;
+  display:inline-block;margin-bottom:1rem;
+}
+.event h3{color:#ffe259;margin-bottom:.5rem}
+.event p{color:#e0e0ff}
+.event button{
+  margin-top:1.2rem;
+  padding:10px 22px;border:none;border-radius:25px;
+  background:linear-gradient(135deg,#ff4ecd,#6a5cff);
+  color:#fff;cursor:pointer;
+}
+
+/* TEAM */
+.team-grid{
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:2rem;
+}
+.team{
+  background:#12165a;padding:2rem;border-radius:30px;text-align:center;
+}
+.team img{
+  width:120px;height:120px;border-radius:50%;
+  border:4px solid #5efce8;object-fit:cover;
+}
+
+/* LINKEDIN ICON */
+.socials{
+  margin-top:10px;display:flex;justify-content:center;
+}
+.socials a{
+  width:34px;height:34px;border-radius:50%;
+  background:#5efce8;color:#0b0f2f;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;text-decoration:none;
+}
+
+/* INSTAGRAM */
+.instagram{
+  background:linear-gradient(180deg,#13186b,#0b0f2f);
+  padding:4rem;border-radius:40px;text-align:center;
+}
+.instagram img{
+  width:160px;height:160px;border-radius:20px;
+  border:4px solid #ff4ecd;margin-top:1.5rem;
+}
+.instagram p{color:#e6e6ff;margin-top:1rem}
+
+/* FOOTER */
+footer{
+  background:#050824;padding:2rem;text-align:center;color:#bdbdff;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero{flex-direction:column;text-align:center}
+  .hero-text{text-align:center}
+  #constellation{position:relative;transform:none;margin-top:3rem}
+  nav{display:none}
+}
+/* ALGOMANIA FEATURED WRAPPER */
+.algomania-wrapper{
+  margin:2rem 0;
+  padding:2rem;
+  border-radius:28px;
+  background:linear-gradient(
+    180deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  box-shadow:
+    inset 0 0 40px rgba(94,252,232,0.12),
+    0 30px 80px rgba(0,0,0,.45);
+  display:flex;
+  justify-content:center;
+}
+
+/* ALGOMANIA POSTER */
+.algomania-poster{
+  width:100%;
+  max-width:340px;
+  max-height:520px;
+  object-fit:contain;
+  border-radius:22px;
+  box-shadow:
+    0 25px 60px rgba(0,0,0,.55),
+    0 0 35px rgba(94,252,232,.35);
+  transition:transform .4s ease, box-shadow .4s ease;
+}
+
+/* HOVER EFFECT */
+.algomania-poster:hover{
+  transform:scale(1.05);
+  box-shadow:
+    0 35px 80px rgba(0,0,0,.65),
+    0 0 55px rgba(94,252,232,.55);
+}
+/* BIG CENTERED REGISTER BUTTON */
+.register-big{
+  display:block;
+  margin:2rem auto 0;
+  padding:16px 44px;
+  font-size:1.05rem;
+  font-weight:600;
+  border:none;
+  border-radius:40px;
+  background:linear-gradient(135deg,#ff4ecd,#6a5cff);
+  color:#fff;
+  cursor:pointer;
+  box-shadow:0 20px 50px rgba(255,78,205,.5);
+  transition:transform .3s ease, box-shadow .3s ease;
+}
+
+.register-big:hover{
+  transform:scale(1.08);
+  box-shadow:0 30px 70px rgba(255,78,205,.7);
+}
+/* VIEW MORE BUTTON */
+.view-more-btn{
+  margin-top:1.2rem;
+  padding:10px 26px;
+  border:none;
+  border-radius:25px;
+  background:linear-gradient(135deg,#5efce8,#6a5cff);
+  color:#0b0f2f;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.view-more-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:0 15px 40px rgba(94,252,232,.4);
+}
+/* ================= HOVER GLOW ENHANCEMENTS ================= */
+
+/* WHO WE ARE */
+.about{
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+.about:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 0 40px rgba(94,252,232,.25),
+    0 30px 80px rgba(0,0,0,.55);
+}
+
+/* EVENTS (PAST + UPCOMING) */
+.event{
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+.event:hover{
+  transform:translateY(-10px);
+  box-shadow:
+    0 25px 70px rgba(94,252,232,.35),
+    0 0 35px rgba(94,252,232,.25);
+}
+
+/* TEAM CARDS */
+.team{
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+.team:hover{
+  transform:translateY(-12px);
+  box-shadow:
+    0 30px 90px rgba(94,252,232,.45),
+    0 0 45px rgba(94,252,232,.3);
+}
+
+/* INSTAGRAM SECTION */
+.instagram{
+  transition:transform .35s ease, box-shadow .35s ease;
+}
+.instagram:hover{
+  transform:translateY(-8px);
+  box-shadow:
+    0 0 50px rgba(255,78,205,.35),
+    0 35px 90px rgba(0,0,0,.6);
+}
+
+
+</style>
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="nav-left">
+    <img src="ACM_logo.jpeg" class="logo">
+    <strong>ACM Amrita</strong>
+  </div>
+  <nav>
+    <a href="home.html">Home</a>
+    <a href="events.html">Events</a>
+    <a href="teams.html">Teams</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+  <div class="nav-right">
+    <img src="amrita-logo-new.svg" class="logo">
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="tech-grid"></div>
+  <div class="binary">101010101010101010101010101010</div>
+
+  <div class="floating-icons">
+    <span>{ }</span><span>&lt;/&gt;</span><span>AI</span><span>⚙️</span><span>λ</span>
+  </div>
+
+  <svg class="circuit" viewBox="0 0 800 400">
+    <path d="M10 200 L200 200 L200 80 L400 80"/>
+    <path d="M300 300 L300 150 L550 150"/>
+    <path d="M500 50 L700 50 L700 250"/>
+  </svg>
+
+  <div class="hero-text">
+    <h1>ACM Student Chapter<br>Amrita</h1>
+    <p>Building coders. Creating leaders. Powering innovation through technology.</p>
+<button onclick="window.location.href='about.html'">
+  About ACM
+</button>
+  </div>
+
+  <canvas id="constellation"></canvas>
+</section>
+
+<!-- ABOUT -->
+<section>
+  <h2 class="title">Who We Are</h2>
+  <div class="about">
+    <p>
+      The <strong>ACM Student Chapter at Amrita Vishwa Vidyapeetham</strong> is a vibrant,
+      student-driven technical community dedicated to fostering innovation, critical thinking,
+      and excellence in computing. Operating under the world-renowned
+      <strong>Association for Computing Machinery (ACM)</strong>, our chapter serves as a platform
+      for students to explore technology beyond textbooks.
+      <br><br>
+      We actively organize <strong>hackathons, technical workshops, coding competitions,
+      expert lectures, and collaborative projects</strong> that provide hands-on experience
+      with real-world tools and technologies. Alongside technical growth, we emphasize leadership,
+      teamwork, and professional development, enabling our members to grow as confident
+      innovators and future leaders in the tech industry.
+    </p>
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section>
+  <h2 class="title">Our Events</h2>
+
+  <h3 style="color:#5efce8;margin-bottom:1.5rem;">Upcoming Events</h3>
+  <div class="events-grid" style="margin-bottom:4rem;">
+    <div class="event">
+      <span>13 FEB 2026</span>
+      <h3>Algomania 3.0</h3>
+      <p>
+        Algomania 3.0 is the flagship overnight hackathon hosted by the ACM Student Chapter,
+        bringing together innovators to build impactful solutions through collaboration and creativity.
+      </p>
+      <div class="algomania-wrapper">
+  <img src="algomania.png" class="algomania-poster" alt="Algomania 3.0 Poster">
+</div>
+    <button class="register-big">Register Now</button>
+
+
+    </div>
+  </div>
+
+  <h3 style="color:#5efce8;margin-bottom:1.5rem;">Past Events</h3>
+  <div class="events-grid">
+    <div class="event">
+      <span>Past Event</span>
+      <h3>ByteRoots</h3>
+      <p>
+        A collaborative Tech × Treasure Hunt event conducted with the Prakriti Club,
+        combining technical challenges, logical thinking, and teamwork.
+      </p>
+      <button class="view-more-btn" onclick="window.location.href='events.html'">
+  View More
+</button>
+
+    </div>
+
+    <div class="event">
+      <span>Past Event</span>
+      <h3>Aarohan</h3>
+      <p>
+        An outreach event where school students visited the campus and participated
+        in interactive technical games and puzzle-based stalls.
+      </p>
+      <button class="view-more-btn" onclick="window.location.href='events.html'">
+  View More
+</button>
+
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section>
+  <h2 class="title">Meet the Team</h2>
+  <div class="team-grid">
+    <div class="team">
+      <img src="keerthana.jpeg">
+      <h3>President</h3><p>Keerthana</p>
+      <div class="socials"><a href="https://www.linkedin.com/in/keerthana-menon-7052ab351">in</a></div>
+    </div>
+    <div class="team">
+      <img src="lasya.jpeg">
+      <h3>Vice President</h3><p>Lasya</p>
+      <div class="socials"><a href="www.linkedin.com/in/durgalasyadevalla3101">in</a></div>
+    </div>
+    <div class="team">
+      <img src="manvith.jpeg">
+      <h3>Treasurer</h3><p>Manvith</p>
+      <div class="socials"><a href="https://www.linkedin.com/in/manvith-reddy512">in</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTAGRAM -->
+<section>
+  <div class="instagram">
+    <h3>Follow Us on Instagram 📸</h3>
+    <p>
+      Scan the QR code and stay updated with our latest events, workshops,
+      hackathons, announcements, and behind-the-scenes moments at <strong>ACM Amrita</strong>.
+    </p>
+    <p>
+      Be part of a growing community of learners and innovators —
+      <strong>learn, build, and grow with us</strong> 🚀
+    </p>
+    <p><strong>@acm_aseb_official</strong></p>
+    <img src="acm_aseb_official_qr.png">
+  </div>
+</section>
+
+<footer>
+  © ACM Student Chapter | Amrita Vishwa Vidyapeetham, Bengaluru
+</footer>
+
+<script>
+const canvas=document.getElementById("constellation");
+const ctx=canvas.getContext("2d");
+canvas.width=420;canvas.height=420;
+const nodes=[];
+for(let i=0;i<40;i++)nodes.push({x:Math.random()*420,y:Math.random()*420,vx:(Math.random()-.5)*.6,vy:(Math.random()-.5)*.6});
+function animate(){
+  ctx.clearRect(0,0,420,420);
+  for(let i=0;i<nodes.length;i++){
+    for(let j=i+1;j<nodes.length;j++){
+      const dx=nodes[i].x-nodes[j].x,dy=nodes[i].y-nodes[j].y,d=Math.sqrt(dx*dx+dy*dy);
+      if(d<120){ctx.strokeStyle=`rgba(94,252,232,${1-d/120})`;ctx.beginPath();ctx.moveTo(nodes[i].x,nodes[i].y);ctx.lineTo(nodes[j].x,nodes[j].y);ctx.stroke();}
+    }
+  }
+  nodes.forEach(n=>{
+    ctx.fillStyle="#5efce8";ctx.beginPath();ctx.arc(n.x,n.y,2,0,Math.PI*2);ctx.fill();
+    n.x+=n.vx;n.y+=n.vy;
+    if(n.x<0||n.x>420)n.vx*=-1;
+    if(n.y<0||n.y>420)n.vy*=-1;
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>
